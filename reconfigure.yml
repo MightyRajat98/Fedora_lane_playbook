@@ -1,0 +1,11 @@
+---
+- name: Reconfigure web servers (demo)
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Confirm connectivity
+      ansible.builtin.ping:
+
+    - name: Show where this ran
+      ansible.builtin.debug:
+        msg: "Ran on {{ inventory_hostname }}"
